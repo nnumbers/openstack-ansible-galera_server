@@ -57,7 +57,7 @@
             options:
               ListenStream: "{{ galera_server_bind_address }}:{{ galera_monitoring_check_port }}"
               IPAddressDeny: any
-              IPAddressAllow: "{{ (galera_monitoring_allowed_source is defined) | ternary(galera_monitoring_allowed_source, 'localhost') }}"
+              IPAddressAllow: any
               Accept: "yes"
               FreeBind: "true"
   tags:
